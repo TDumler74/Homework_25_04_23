@@ -20,7 +20,7 @@ public class Main {
     int number = Integer.parseInt(bufferedReader.readLine());
 
     FileWriter outputFileWriter = new FileWriter("output.txt");
-    outputFileWriter.write(decToBin(number));
+    outputFileWriter.write(decToBin(number)+"\n");
     outputFileWriter.close();
   }
 
@@ -45,6 +45,7 @@ public class Main {
     if (isNegative) {
       str.insert(0, "-");//добавляем знак "-" если число отрицательное
     }
+
     return str.toString();
   }
 }
