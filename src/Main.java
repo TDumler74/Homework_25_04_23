@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-//Задача 1
+
+  //Задача 1
 //Напишите программу, которая:
 //
 //прочитает целое число из файла res/in.txt
@@ -15,14 +16,14 @@ public class Main {
 // из задачи 1 предыдущего урока или информацией из разбора домашнего задания.
   public static void main(String[] args) throws IOException {
 
-
     BufferedReader bufferedReader = new BufferedReader(new FileReader("input.txt"));
-    int number=Integer.parseInt(bufferedReader.readLine());
+    int number = Integer.parseInt(bufferedReader.readLine());
 
     FileWriter outputFileWriter = new FileWriter("output.txt");
     outputFileWriter.write(decToBin(number));
     outputFileWriter.close();
   }
+
   public static String decToBin(int number) {
 
     StringBuilder str = new StringBuilder(" ");//инициализируем строку
@@ -42,7 +43,7 @@ public class Main {
       // digit-вписываем как первую цифру в нашу строку и это всё повторяем пока number !=0.
     }
     if (isNegative) {
-      str.insert(0, "-");
+      str.insert(0, "-");//дополняем знак "-" если число отрицательное
     }
     return str.toString();
   }
